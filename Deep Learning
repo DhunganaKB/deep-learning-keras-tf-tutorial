@@ -1,2 +1,5 @@
 Information about deep Learning:
 Why deep learning?: As the size of data increase, the performace of deep learning increases almost linearly. But usual classical ML argorithms does reach to limit quickly.
+Deep Learning help automatically feature engineering (feature extraction): Deep learning handle the feature extraction and Model simulateniously.
+Complex problem can solve complicated problication such as image classification, object detection and NLP Problem
+
