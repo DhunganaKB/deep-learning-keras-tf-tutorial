@@ -1,5 +1,15 @@
 Information about deep Learning:
 Why deep learning?: As the size of data increase, the performace of deep learning increases almost linearly. But usual classical ML argorithms does reach to limit quickly.
-Deep Learning help automatically feature engineering (feature extraction): Deep learning handle the feature extraction and Model simulateniously.
+Deep Learning help automatically feature engineering (feature extraction): Deep learning handle the feature extraction and Model simulateniously. In ML project, feature exraction
+and training the model are two different steps.
+
 Complex problem can solve complicated problication such as image classification, object detection and NLP Problem
+
+Deep Learning: ANN, CNN, RNN
+First step-Neural network (first nn is Perceptron)
+
+ANN- Forward Propogation = Z = Act(y); y =a.w + b and activation function ex is sigmoid such as (1/(1+e^-y)
+Activation function: Sigmod, tanh, Relu (max(y,0))
+
+
 
