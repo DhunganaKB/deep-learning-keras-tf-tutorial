@@ -11,5 +11,13 @@ First step-Neural network (first nn is Perceptron)
 ANN- Forward Propogation = Z = Act(y); y =a.w + b and activation function ex is sigmoid such as (1/(1+e^-y)
 Activation function: Sigmod, tanh, Relu (max(y,0))
 
+Back propogation is the process by which we adjust the parameters in the neural network as w_new = w_old - eta * (dL/dw) (derivative of loss function, cost function)
+
+Vanishing gradient: mainly to sigmoid function we see the vanishing gradient. When we use the signoid function as a activation funcation in the deep neural network some of the
+derivative values (in the back propagation) are very small (derivative of sigmoid function is from 0 to 0.25). During the back propagation, we have a chain rule and need to multiple
+multiple derivatives terms. when many small values get multiplied, the resultant value becames almost zero as a result new parameter will have the almost value as the old one
+there is no change in the parameter and there is no learning. To get rid of this problem, we do not use the sigmod function in the deep NN.
+
+
 
 
