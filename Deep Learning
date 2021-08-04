@@ -16,7 +16,11 @@ Back propogation is the process by which we adjust the parameters in the neural 
 Vanishing gradient: mainly to sigmoid function we see the vanishing gradient. When we use the signoid function as a activation funcation in the deep neural network some of the
 derivative values (in the back propagation) are very small (derivative of sigmoid function is from 0 to 0.25). During the back propagation, we have a chain rule and need to multiple
 multiple derivatives terms. when many small values get multiplied, the resultant value becames almost zero as a result new parameter will have the almost value as the old one
-there is no change in the parameter and there is no learning. To get rid of this problem, we do not use the sigmod function in the deep NN.
+there is no change in the parameter and there is no learning. To get rid of this problem, we do not use the sigmod function in the deep NN. tanh activation function also will have
+this issue (the range of the derivative of this activation function is 0-1).
+Exploding Gradient Problem: When the initial weight values are large, sometime in the back -propagation we get to multiple multiple terms. As a reuslt our derivative term might be
+very big in this equation w_new = w_old - eta * (dL/dw). When the second term is very large, our w_new will be very large with negative value and this issue won't let conververg
+to the minimum point. this is know as exploding gradient problem.
 
 
 
