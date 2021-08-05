@@ -32,6 +32,33 @@ Rlu- Rectificed Linear Unit: The derivative of RLu function is either 0 or 1 (=0
 either be 1 or 0. If 1, it is all right. But if zero, them the w_new and w_old remain same and basically this particular neuron will be dead. to not make the derivative exactly
 zero, we can consider leaky RLu function, which has small derivative value when z is negative. 
 
+Leaky RLu = max(0.01x, x). If there are many negative weight values which causes the derivative value = 0.01 and in back propagation there could be multiple 0.01 must be
+multiplied and as a result vanishing gradient still persist. 
+
+sigmoid is not zero centered since the data do not pass through zero so the computation takes little longer, whereas the tanh is zero centered and computational efficiency.
+Thus tanh is better than sigmoid but both suffer from vanishing gradient as both derivative rang from 0 to 0.25/1.0.
+
+ELU - Exponential Liner Units: x if x > 0 else a*(exp(x) - 1)
+
+PRelu (Parametric ReLU)
+
+Swish (A self Gated Function): (applied when you have more than 40 layers)  y = x *sigmod(x)
+
+Soft max: multiobject classification (last layer of the nn)
+(https://www.dlology.com/blog/how-to-choose-last-layer-activation-and-loss-function/#:~:text=Last%20layer%20use%20%22softmax%22%20activation,of%20our%2010%20digit%20classes)
+
+# Weight Initialization: Key oints: Weights should be small, should not same, should have good variance
+Using Uniform distribution (-1/sqrt(fan_in), 1/sqrt(fan_in)): fan_in = number of input feature
+Xavier/Gorat: Xavier Normal- w ~ N(0,sig) where sig = sqrt(2/(fan_in + fan_out))
+Xavier Uniform 
+
+
+
+
+
+
+
+
 
 
 
