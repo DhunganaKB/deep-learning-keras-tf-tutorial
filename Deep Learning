@@ -52,6 +52,9 @@ Using Uniform distribution (-1/sqrt(fan_in), 1/sqrt(fan_in)): fan_in = number of
 Xavier/Gorat: Xavier Normal- w ~ N(0,sig) where sig = sqrt(2/(fan_in + fan_out))
 Xavier Uniform 
 
+Stochastic Gradient Descent: In gradient descent, we use all the observation points to update the derivative term (dL/dw_old), but if I consider only one data point for this
+opdate, it is called stochastic gradient descent (SGD). If we use k-points for the derivative update, we call Mini batch SGD. Mini-batch is popularly used mostly in NN.
+
 
 
 
