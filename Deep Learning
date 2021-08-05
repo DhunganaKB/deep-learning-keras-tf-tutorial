@@ -22,6 +22,17 @@ Exploding Gradient Problem: When the initial weight values are large, sometime i
 very big in this equation w_new = w_old - eta * (dL/dw). When the second term is very large, our w_new will be very large with negative value and this issue won't let conververg
 to the minimum point. this is know as exploding gradient problem.
 
+Threshold activation function- tanh(x), derivate range is again (0,1)
+
+Drop out and Regulation: When the neural network is very large, there are so many parameter to fit and ofen time it overfit the training data set. To fix this problem we get to
+use drop out technique. The drop out technique is almost like a random forest approach. In each iteration, different features and nodes will be selected and other will be excluded.
+But when it go through several iterations, it will touch upon all the nodes and features.
+
+Rlu- Rectificed Linear Unit: The derivative of RLu function is either 0 or 1 (=0 if z <0 else 1). As a result of this, the derivative term in equation w_new = w_old - eta * (dL/dw) will
+either be 1 or 0. If 1, it is all right. But if zero, them the w_new and w_old remain same and basically this particular neuron will be dead. to not make the derivative exactly
+zero, we can consider leaky RLu function, which has small derivative value when z is negative. 
+
+
 
 
 
