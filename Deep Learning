@@ -79,7 +79,15 @@ Minibatch SGD:- # of observation = 100, batch size = 20 => iteration = 100/20 = 
 # look at adam optimizer: 
 
 ## Loss function: 
-1. Square Error Loss (mean squired error loss, MSE) = Loss function = (y-yhat)^2 - 
+1. Square Error Loss (mean squired error loss, MSE) = Loss function = (y-yhat)^2 - Advantage- quadratic equation - this function has only one globale minimum & no local minimum
+MSE loss penalize the model making large error by square them. Disadvantages - It is not robust to outlier.
+2. Absolute Erro Loss (Mean absolute error loss) = |y-yhat|. Advantage: the MEZ is more robust to lutlier as compared to MSE. Disadvantage: Computationally difficult
+3. Huber Loss : Combined both MSE and MAE- use new hyper-parameter delta will be introduced. if the difference (y-yhat) < delat take the MSE and otherwise take different
+function.
+4. For classification- Cross Entropy (this for only binary cross entropy)=  -ylog(yhat) - (1-y)*log(1-yhat). only for binary classification
+Multi Class Cross Entropy Loss: (this is nicely explained at https://www.youtube.com/watch?v=e59u5YyuEfQ&list=PLZoTAELRMXVPGU70ZGsckrMdr0FteeRUi&index=22) at time around
+50 minutes.
+
 
 
 
