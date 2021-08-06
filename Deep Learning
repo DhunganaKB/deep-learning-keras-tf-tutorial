@@ -52,8 +52,45 @@ Using Uniform distribution (-1/sqrt(fan_in), 1/sqrt(fan_in)): fan_in = number of
 Xavier/Gorat: Xavier Normal- w ~ N(0,sig) where sig = sqrt(2/(fan_in + fan_out))
 Xavier Uniform 
 
-Stochastic Gradient Descent: In gradient descent, we use all the observation points to update the derivative term (dL/dw_old), but if I consider only one data point for this
+Stochastic Gradient Descent (SGD): In gradient descent, we use all the observation points to update the derivative term (dL/dw_old), but if I consider only one data point for this
 opdate, it is called stochastic gradient descent (SGD). If we use k-points for the derivative update, we call Mini batch SGD. Mini-batch is popularly used mostly in NN.
+Minibatch, loss = sum over k (y-yhat)^2 (here k < n, how many observation included in the batch)
+Gradeient discent, loss = sum over n (y-yhat)^2 (all observations are included)
+stochastic gradient, loss = (y-yhat)^2
+
+SGD method givea a very noisy optimization process (big fluctuation), to make the optimization process smooth we need to introduce the new variable (which is called gamma). This
+gamma basically help to get the moving average on each step based on proceeding steps and this is called as momentum (SGD with Momentum). The main job of this variable is to 
+reduce the noise while using SGD for the optimization (like in time series ARIMA model).
+
+Optimization (Adagrad Optimizers, adaptic gradient): In this approach, learning rate (eta) won't be constant and will change on every iteration based on  all derivative
+from previous iterations.  new_eta = old_eta/(sqrt(alpha + ep))
+In some cases alpha is very very big and new_eta becomes very small, this is the problem with this approach. to limit alpha value from becoming very large, we need to put some
+restriction so that eta value changes very slowly to the smaller value
+
+Epoch and Iteration:
+Epoch: how many time we want to complet forward and backward propagation for the entire data set.exmaple 100 observations in a data set and epoch = 20, then for gradient descent
+each time all the observations are used and we will update total of 20 times. 
+
+Iteration: number of observation in data set / batch size. For stochastic gradient descent (sgd, only one observation is considered at a time), iteration = # of observations
+
+Minibatch SGD:- # of observation = 100, batch size = 20 => iteration = 100/20 = 5 (in one epoch there must be 5 iterations). This means that for each iteration there will be 
+5 forward and backward propogation (if there are 20 epoch, then total back-forward iteration = 5*20 = 100)
+
+# look at adam optimizer: 
+
+## Loss function: 
+1. Square Error Loss (mean squired error loss, MSE) = Loss function = (y-yhat)^2 - 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
