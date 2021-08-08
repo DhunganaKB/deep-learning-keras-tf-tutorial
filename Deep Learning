@@ -77,6 +77,8 @@ Minibatch SGD:- # of observation = 100, batch size = 20 => iteration = 100/20 = 
 5 forward and backward propogation (if there are 20 epoch, then total back-forward iteration = 5*20 = 100)
 
 # look at adam optimizer: 
+adaGra (Adaptive Gradient Algorithm ) and Room Mean Square Propogation (RMPFprop) optimizer use variable learing rate but they use only average of first momentum (mean value
+from the previous iteration). But adam (daptive moment estimation) take consideration of both first and second momenum (mean and variance), adam is the most latest one. 
 
 ## Loss function: 
 1. Square Error Loss (mean squired error loss, MSE) = Loss function = (y-yhat)^2 - Advantage- quadratic equation - this function has only one globale minimum & no local minimum
@@ -87,6 +89,9 @@ function.
 4. For classification- Cross Entropy (this for only binary cross entropy)=  -ylog(yhat) - (1-y)*log(1-yhat). only for binary classification
 Multi Class Cross Entropy Loss: (this is nicely explained at https://www.youtube.com/watch?v=e59u5YyuEfQ&list=PLZoTAELRMXVPGU70ZGsckrMdr0FteeRUi&index=22) at time around
 50 minutes.
+
+## Running keras sequential model: model_history = classifier.fit(X_train, y_train, validation_split=0.33, batch_size=10, epochs=100)
+## validation_split=0.33 (it gives 33% data as the validation data set and not used in the training, batch_size=10, iteration = number of observation/batch_size)
 
 
 
