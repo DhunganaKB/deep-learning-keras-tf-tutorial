@@ -93,6 +93,16 @@ Multi Class Cross Entropy Loss: (this is nicely explained at https://www.youtube
 ## Running keras sequential model: model_history = classifier.fit(X_train, y_train, validation_split=0.33, batch_size=10, epochs=100)
 ## validation_split=0.33 (it gives 33% data as the validation data set and not used in the training, batch_size=10, iteration = number of observation/batch_size)
 
+## Tensorboard visualization: from the jupyter-notebook:
+os.system('rm -rf ./logs/') (beginning)
+### before running the fit model command
+log_dir = 'logs/fit/' + datetime.datetime.now().strftime('%Y%m%d-%H%M%S')
+tensorboard_callback = tf.keras.callbacks.TensorBoard(log_dir=log_dir, histogram_freq=1)
+#while fitting the model include this:
+model.fit(X_train, y_train, batch_size=10, validation_split = 0.3, epochs=20, callbacks=[tensorboard_callback])
+# After fitting is finished:
+%load_ext tensorboard
+%tensorboard --logdir logs/fit ( if running in terminal, run this only) if on jupyter notebook, run both these commands
 
 
 
