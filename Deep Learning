@@ -105,8 +105,16 @@ model.fit(X_train, y_train, batch_size=10, validation_split = 0.3, epochs=20, ca
 %tensorboard --logdir logs/fit ( if running in terminal, run this only) if on jupyter notebook, run both these commands
 
 
+## Hyper paramter tunning:
+look at the keras tuner
+# define all parameters: https://medium.com/swlh/hyperparameter-tuning-in-keras-tensorflow-2-with-keras-tuner-randomsearch-hyperband-3e212647778f
+https://www.youtube.com/watch?v=Lx16T9cl5ng&list=PLZoTAELRMXVPGU70ZGsckrMdr0FteeRUi&index=25
+https://www.sicara.ai/blog/hyperparameter-tuning-keras-tuner
+#Random Search- max_trials and execution_per_trial are in https://datascience.stackexchange.com/questions/68336/what-is-max-trials-and-executions-per-trial-in-keras-tuner
+# 
 
-
+# For multiclass classification (using deep learing is a bit tiricky): one observation may have two lablels as in this example:
+https://machinelearningmastery.com/multi-label-classification-with-deep-learning/
 
 
 
